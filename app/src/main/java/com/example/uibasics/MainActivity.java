@@ -13,14 +13,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button btnHello = findViewById(R.id.btnHello);
+        btnHello.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Hello");
+            }
+        });
     }
 
-    public void operations(View view) {
-        Button btn = (Button) view;
-        if(btn.getId() == R.id.helloBtn) {
-            TextView txtWelcome = findViewById(R.id.txtWelcome);
-            txtWelcome.setText("Hello Again");
-        }
-
-    }
 }
